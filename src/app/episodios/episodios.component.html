@@ -1,0 +1,21 @@
+<div>
+    <div class="grid md:grid-cols-3 gap-4 grid-cols-1">
+          <div *ngFor="let personaje of personajes" class="bg-white p-5 mx-auto shadow-lg">
+            <h1 class="text-4xl font-semibold mb-5 text-center">{{personaje.name}}</h1>
+            <img class="mx-auto" src={{personaje.image}} alt="">
+            <div class="text-center mt-5">
+                <p class="text-green-500 text-3xl" *ngIf="personaje.status === 'Alive'">{{personaje.status}}</p>
+                <p class="text-red-500 text-3xl" *ngIf="personaje.status === 'Dead'">{{personaje.status}}</p>
+                <p class="text-slate-500 text-3xl" *ngIf="personaje.status === 'unknown'">{{personaje.status}}</p>
+              </div>
+            <div class="flex flex-row mt-5 justify-between mb-5 text-xl font-semibold">
+                <div>
+                    <p>Species: {{personaje.species}}</p>
+                </div>
+                <div>
+                  <p>Gender: {{personaje.gender}}</p>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
