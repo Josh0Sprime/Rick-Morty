@@ -1,5 +1,5 @@
 <div>
-    <div class="grid md:grid-cols-3 gap-4 grid-cols-1 gap-y-10">
+    <div infinite-scroll (scrolled)="scroll()" class="grid md:grid-cols-3 gap-4 grid-cols-1 gap-y-10">
           <div *ngFor="let personaje of personajes" class="bg-white p-5 shadow-lg rounded-lg">
             <h1 class="text-4xl font-semibold mb-5 text-center">{{personaje.name}}</h1>
             <img class="mx-auto" src={{personaje.image}} alt="">

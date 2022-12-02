@@ -1,6 +1,5 @@
 import { Component , OnInit} from '@angular/core';
 import { RickService } from '../services/rick.service';
-import { Episodios } from './interfaces/episodios';
 
 @Component({
   selector: 'app-episodios',
@@ -16,9 +15,10 @@ export class EpisodiosComponent implements OnInit{
   }
   ngOnInit(): void {
     this.sv.obtenerEpisodios().subscribe((resp: any) => {
-      console.log(resp);
       this.personajes = resp.results
     })
   }
-
+  scroll(){
+    console.log('hola');
+  }
 }
